@@ -6,6 +6,7 @@ dependencies:
     - field.storage.node.field_paragraphs
     - node.type.landings_page
     - paragraphs.paragraphs_type.2_column
+    - paragraphs.paragraphs_type.block
     - paragraphs.paragraphs_type.content_list
     - paragraphs.paragraphs_type.media
   module:
@@ -28,6 +29,7 @@ settings:
       media: media
       content_list: content_list
       2_column: 2_column
+      block: block
     target_bundles_drag_drop:
       media:
         enabled: true
@@ -38,4 +40,7 @@ settings:
       2_column:
         enabled: true
         weight: 4
+      block:
+        enabled: true
+        weight: 5
 field_type: entity_reference_revisions
