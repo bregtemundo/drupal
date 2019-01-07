@@ -1,0 +1,11 @@
+uuid: 9d7f2e71-b036-4d79-9f52-c3856bfecbd4
+langcode: nl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: lO5ziR5dVI1PpEeHZsSOfQ-Y7NWihSDKW8-MMf6uoms
+name: Labels
+vid: tags
+description: 'Use tags to group articles on similar topics into categories.'
+hierarchy: 0
+weight: 0

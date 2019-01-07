@@ -1,0 +1,13 @@
+uuid: d117de4f-775b-43e3-a95e-918ae1e54bdb
+langcode: nl
+status: true
+dependencies:
+  module:
+    - comment
+_core:
+  default_config_hash: tWOIjSMobEWOFZddMkNqb9JySbOVwE1diC6NRqcfLTk
+id: comment_unpublish_action
+label: 'Reactie intrekken'
+type: comment
+plugin: 'entity:unpublish_action:comment'
+configuration: {  }

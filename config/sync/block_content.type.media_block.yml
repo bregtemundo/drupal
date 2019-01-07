@@ -1,0 +1,8 @@
+uuid: 4d4656a9-5517-4815-a1bf-bcdac83be5ce
+langcode: nl
+status: true
+dependencies: {  }
+id: media_block
+label: 'Media block'
+revision: 0
+description: ''

@@ -1,0 +1,14 @@
+uuid: b9230f30-3733-442d-b0a4-2d4ba401b142
+langcode: nl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: vymHlgJy26BuI5GGj9-IXjwR3dRC5C0tij4BpWJnoqw
+id: feedback
+label: 'Website feedback'
+recipients:
+  - info@pure-communication.be
+reply: ''
+weight: 0
+message: 'Uw bericht is verzonden.'
+redirect: ''

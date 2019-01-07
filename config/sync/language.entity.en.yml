@@ -1,0 +1,9 @@
+uuid: 787a545e-a4a7-4500-ab12-19c86a5c985b
+langcode: nl
+status: true
+dependencies: {  }
+id: en
+label: English
+direction: ltr
+weight: 1
+locked: false

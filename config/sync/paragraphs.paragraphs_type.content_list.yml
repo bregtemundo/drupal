@@ -1,0 +1,9 @@
+uuid: 1c125298-ea67-49f4-85fc-17af19622ba5
+langcode: nl
+status: true
+dependencies: {  }
+id: content_list
+label: 'Content list'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

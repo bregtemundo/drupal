@@ -1,0 +1,17 @@
+uuid: 470fa91f-9b44-4362-b831-4c270ef4842a
+langcode: nl
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Landings Page'
+type: landings_page
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

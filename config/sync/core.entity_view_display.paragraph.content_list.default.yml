@@ -1,0 +1,37 @@
+uuid: 50a466d2-fb6c-4e08-8b4b-de6a46c233b8
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.content_list.field_content_list
+    - field.field.paragraph.content_list.field_content_list_intro
+    - paragraphs.paragraphs_type.content_list
+  module:
+    - layout_builder
+    - text
+    - viewsreference
+third_party_settings:
+  layout_builder:
+    sections: {  }
+id: paragraph.content_list.default
+targetEntityType: paragraph
+bundle: content_list
+mode: default
+content:
+  field_content_list:
+    weight: 0
+    label: above
+    settings:
+      plugin_types:
+        - block
+    third_party_settings: {  }
+    type: viewsreference_formatter
+    region: content
+  field_content_list_intro:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

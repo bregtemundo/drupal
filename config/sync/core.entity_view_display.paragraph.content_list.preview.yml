@@ -1,0 +1,31 @@
+uuid: de2c365f-6851-4182-8657-1eeceab702df
+langcode: nl
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.content_list.field_content_list
+    - field.field.paragraph.content_list.field_content_list_intro
+    - paragraphs.paragraphs_type.content_list
+  module:
+    - layout_builder
+    - text
+third_party_settings:
+  layout_builder:
+    sections: {  }
+    allow_custom: false
+    enabled: false
+id: paragraph.content_list.preview
+targetEntityType: paragraph
+bundle: content_list
+mode: preview
+content:
+  field_content_list_intro:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden:
+  field_content_list: true

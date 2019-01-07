@@ -1,0 +1,24 @@
+uuid: cb1cfa09-5915-46a6-a2a1-c989b9c538bf
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.2_column.field_column_block
+    - paragraphs.paragraphs_type.2_column
+  module:
+    - entity_reference_revisions
+id: paragraph.2_column.default
+targetEntityType: paragraph
+bundle: 2_column
+mode: default
+content:
+  field_column_block:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

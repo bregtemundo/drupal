@@ -1,0 +1,31 @@
+uuid: cfc0fb98-f6fe-4752-92b4-2d78178a09d0
+langcode: nl
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.landings_page.body
+    - node.type.landings_page
+  module:
+    - text
+    - user
+id: node.landings_page.teaser
+targetEntityType: node
+bundle: landings_page
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,22 @@
+uuid: 27d92607-7c00-4c08-b87f-bbe6dc9176dd
+langcode: nl
+status: true
+dependencies:
+  config:
+    - node.type.landings_page
+id: node.landings_page.promote
+field_name: promote
+entity_type: node
+bundle: landings_page
+label: 'Aangeraden op de voorpagina'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Aan
+  off_label: Uit
+field_type: boolean

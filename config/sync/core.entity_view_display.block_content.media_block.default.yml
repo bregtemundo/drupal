@@ -1,0 +1,33 @@
+uuid: 6d3f0c80-5386-4af0-a1c5-c3fd9ad7455c
+langcode: nl
+status: true
+dependencies:
+  config:
+    - block_content.type.media_block
+    - field.field.block_content.media_block.body
+    - field.field.block_content.media_block.field_media
+  module:
+    - text
+id: block_content.media_block.default
+targetEntityType: block_content
+bundle: media_block
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_media:
+    type: entity_reference_entity_view
+    weight: 1
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

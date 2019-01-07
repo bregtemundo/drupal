@@ -1,0 +1,21 @@
+uuid: 1a445d8f-b4c8-40fd-b014-151a18bffdc9
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_content_list_intro
+    - paragraphs.paragraphs_type.content_list
+  module:
+    - text
+id: paragraph.content_list.field_content_list_intro
+field_name: field_content_list_intro
+entity_type: paragraph
+bundle: content_list
+label: 'content list intro'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

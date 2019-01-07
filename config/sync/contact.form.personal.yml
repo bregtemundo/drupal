@@ -1,0 +1,13 @@
+uuid: d6ade829-53e6-4ec6-914f-8931d48844f7
+langcode: nl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: jonvgt3CkUM2eMLTFwWfHileWWDC4YtXCuIlCahTk_I
+id: personal
+label: 'Persoonlijk contactformulier'
+recipients: {  }
+reply: ''
+weight: 0
+message: 'Uw bericht is verzonden.'
+redirect: ''

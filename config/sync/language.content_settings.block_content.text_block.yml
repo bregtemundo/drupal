@@ -1,0 +1,16 @@
+uuid: a856a170-54dc-453e-a325-6352124309ef
+langcode: nl
+status: true
+dependencies:
+  config:
+    - block_content.type.text_block
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: block_content.text_block
+target_entity_type_id: block_content
+target_bundle: text_block
+default_langcode: site_default
+language_alterable: true

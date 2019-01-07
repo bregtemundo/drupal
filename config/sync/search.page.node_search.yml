@@ -1,0 +1,15 @@
+uuid: 88081ee5-30f1-4fb7-902d-eb86787618b6
+langcode: nl
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: 97tvtzGOa8_flb22CzSjgtm_YkiGMHvEBO-6q2K9V_U
+id: node_search
+label: Inhoud
+path: node
+weight: -10
+plugin: node_search
+configuration:
+  rankings: {  }

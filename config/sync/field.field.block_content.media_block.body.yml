@@ -1,0 +1,22 @@
+uuid: 27085ad6-6fba-49e7-abdf-4f00c7d6286e
+langcode: nl
+status: true
+dependencies:
+  config:
+    - block_content.type.media_block
+    - field.storage.block_content.body
+  module:
+    - text
+id: block_content.media_block.body
+field_name: body
+entity_type: block_content
+bundle: media_block
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

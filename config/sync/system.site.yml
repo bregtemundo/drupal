@@ -1,0 +1,14 @@
+uuid: a6b9cd5c-4988-499c-b92f-8cb5f124ace0
+name: Drupal
+mail: info@pure-communication.be
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: nl
+default_langcode: en
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI

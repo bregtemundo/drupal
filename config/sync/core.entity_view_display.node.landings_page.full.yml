@@ -1,0 +1,80 @@
+uuid: c79cf384-7e9e-4e58-95fe-e4e140c5322b
+langcode: nl
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.landings_page.body
+    - field.field.node.landings_page.layout_builder__layout
+    - node.type.landings_page
+  module:
+    - layout_builder
+    - layout_discovery
+    - system
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          13733e06-ca9c-4dc8-bff2-ecf5cc2e6ff7:
+            uuid: 13733e06-ca9c-4dc8-bff2-ecf5cc2e6ff7
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:landings_page:links'
+            additional: {  }
+            weight: 0
+          ebdb34ba-c8f4-4539-aff5-702a328599bf:
+            uuid: ebdb34ba-c8f4-4539-aff5-702a328599bf
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:landings_page:body'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 1
+          1e541db3-bb94-4bbd-a11b-b6afb5bb2091:
+            uuid: 1e541db3-bb94-4bbd-a11b-b6afb5bb2091
+            region: content
+            configuration:
+              id: system_powered_by_block
+              label: 'Gebouwd met Drupal'
+              provider: system
+              label_display: '0'
+              context_mapping: {  }
+            additional: {  }
+            weight: 2
+    allow_custom: false
+    enabled: true
+id: node.landings_page.full
+targetEntityType: node
+bundle: landings_page
+mode: full
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true
+  layout_builder__layout: true
