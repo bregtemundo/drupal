@@ -1,0 +1,11 @@
+uuid: d12495d2-a8d0-4839-a4c3-be50503fd100
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: ALY6jU1YjI3IyBJIn9X_9Q__iTZ0jyTEKzx5TWqogqM
+id: wysiwyg
+label: WYSIWYG
+icon_uuid: null
+description: 'This component includes a WYSIWYG field that leverages CKEditor.'
+behavior_plugins: {  }

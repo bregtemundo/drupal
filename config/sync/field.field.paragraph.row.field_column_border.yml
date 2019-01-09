@@ -1,0 +1,23 @@
+uuid: 3d68b958-2d88-4863-af83-f3bad690b048
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_column_border
+    - paragraphs.paragraphs_type.row
+  module:
+    - options
+_core:
+  default_config_hash: ZUPjEbgq4EZ6hA_VYUK_xZ1Qm8z_e_t8GO57zTs3fPM
+id: paragraph.row.field_column_border
+field_name: field_column_border
+entity_type: paragraph
+bundle: row
+label: 'Column Border'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

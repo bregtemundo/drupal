@@ -1,0 +1,25 @@
+uuid: a6dda68b-d989-4034-be66-4dad3e9c525b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_vertical_alignment
+    - paragraphs.paragraphs_type.hero
+  module:
+    - options
+_core:
+  default_config_hash: 4KZrp_lzeiVlW12F59_Nni8n1Xq1XId6jGNaXZlOsEw
+id: paragraph.hero.field_vertical_alignment
+field_name: field_vertical_alignment
+entity_type: paragraph
+bundle: hero
+label: 'Vertical Alignment'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: flex-align-center
+default_value_callback: ''
+settings: {  }
+field_type: list_string

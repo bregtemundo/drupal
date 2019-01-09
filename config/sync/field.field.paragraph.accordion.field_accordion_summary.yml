@@ -1,0 +1,21 @@
+uuid: 66745dcb-722b-44ea-9368-c1aaf9feafcf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_accordion_summary
+    - paragraphs.paragraphs_type.accordion
+_core:
+  default_config_hash: t92ZYsFVOurDM9wjW88a9ishuG88olrs7vGEcYyz76o
+id: paragraph.accordion.field_accordion_summary
+field_name: field_accordion_summary
+entity_type: paragraph
+bundle: accordion
+label: 'Accordion Summary'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

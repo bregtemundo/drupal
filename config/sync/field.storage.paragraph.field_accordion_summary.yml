@@ -1,0 +1,23 @@
+uuid: 7de9875e-bb71-4fde-a1b4-5e08ae733600
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+_core:
+  default_config_hash: B4g69_-lsDc4RMIBwyrR5x1nA5g97Wrqd0LUPpXPEYo
+id: paragraph.field_accordion_summary
+field_name: field_accordion_summary
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

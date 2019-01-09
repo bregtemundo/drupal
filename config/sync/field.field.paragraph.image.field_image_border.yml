@@ -1,0 +1,25 @@
+uuid: 1b2b0cc6-46a7-4eca-a63e-0a9d12bd0de8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image_border
+    - paragraphs.paragraphs_type.image
+_core:
+  default_config_hash: MzYqck66zD-Rz4PHYfrUo25qaob-QzMeSjpA7-PgzFk
+id: paragraph.image.field_image_border
+field_name: field_image_border
+entity_type: paragraph
+bundle: image
+label: 'Image Border'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

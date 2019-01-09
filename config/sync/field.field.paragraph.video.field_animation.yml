@@ -1,0 +1,23 @@
+uuid: 5d143e58-8358-4e49-9d17-8bda8106f73a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_animation
+    - paragraphs.paragraphs_type.video
+  module:
+    - options
+_core:
+  default_config_hash: 0OD22FJIK6546hNqmN6LaB2mGN53BBuaHqpvOAaBhZI
+id: paragraph.video.field_animation
+field_name: field_animation
+entity_type: paragraph
+bundle: video
+label: Animation
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

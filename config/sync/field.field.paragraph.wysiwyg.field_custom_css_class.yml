@@ -1,0 +1,21 @@
+uuid: f2e13007-930f-4501-9d5a-b49f674b812f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_custom_css_class
+    - paragraphs.paragraphs_type.wysiwyg
+_core:
+  default_config_hash: 4xsSLxjFWLPRmX0SfOBdt2y4i3x5K_B5sqrYIG7bF48
+id: paragraph.wysiwyg.field_custom_css_class
+field_name: field_custom_css_class
+entity_type: paragraph
+bundle: wysiwyg
+label: 'Custom CSS Class'
+description: 'Add a chain of classes as needed (Example: "class__one class__one--two")'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

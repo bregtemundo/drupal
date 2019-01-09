@@ -1,0 +1,11 @@
+uuid: debadbae-8a03-48c9-9b57-7cf075857580
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: DmP9LLlCYHtotux-vbw8cDJa3QrgKV0lEl_OcHec4fc
+id: image
+label: Image
+icon_uuid: null
+description: 'This component will allow for adding an image. This will add the image as a column in the row and can be positioned with the row layout controls.'
+behavior_plugins: {  }

@@ -1,0 +1,25 @@
+uuid: 97800bcb-9b3b-4920-8fe5-50af9c0eefcd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_background_color
+    - paragraphs.paragraphs_type.accordion
+  module:
+    - options
+_core:
+  default_config_hash: 4Y0G2M6Ks3e88QKG7YFK1pqaRdhAxRecLeMZjnoE3RY
+id: paragraph.accordion.field_background_color
+field_name: field_background_color
+entity_type: paragraph
+bundle: accordion
+label: 'Background Color'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: white
+default_value_callback: ''
+settings: {  }
+field_type: list_string

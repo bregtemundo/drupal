@@ -1,0 +1,23 @@
+uuid: f2cb8213-db26-45fb-a3b7-814139df9e11
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_background_color
+    - paragraphs.paragraphs_type.hero
+  module:
+    - options
+_core:
+  default_config_hash: w3JInfrLsXHw9ts8q6SxqbTA1t9jCJ22BtQk2LywcxM
+id: paragraph.hero.field_background_color
+field_name: field_background_color
+entity_type: paragraph
+bundle: hero
+label: 'Background Color'
+description: 'This background color will appear behind the contents of the WYSIWYG text. '
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

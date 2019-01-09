@@ -1,0 +1,25 @@
+uuid: 3dd8dce6-1534-4de5-bd23-b853e492aff4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_horizontal_alignment
+    - paragraphs.paragraphs_type.hero
+  module:
+    - options
+_core:
+  default_config_hash: SDAP2HvUeWSDFmUehtmOkwjVsoEZqfsxaMgwK9wCpys
+id: paragraph.hero.field_horizontal_alignment
+field_name: field_horizontal_alignment
+entity_type: paragraph
+bundle: hero
+label: 'Horizontal Alignment'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: justify-content-center
+default_value_callback: ''
+settings: {  }
+field_type: list_string

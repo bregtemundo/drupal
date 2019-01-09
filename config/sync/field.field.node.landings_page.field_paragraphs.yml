@@ -5,10 +5,6 @@ dependencies:
   config:
     - field.storage.node.field_paragraphs
     - node.type.landings_page
-    - paragraphs.paragraphs_type.2_column
-    - paragraphs.paragraphs_type.block
-    - paragraphs.paragraphs_type.content_list
-    - paragraphs.paragraphs_type.media
   module:
     - entity_reference_revisions
 id: node.landings_page.field_paragraphs
@@ -24,23 +20,40 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    negate: 0
-    target_bundles:
-      media: media
-      content_list: content_list
-      2_column: 2_column
-      block: block
+    negate: 1
+    target_bundles: null
     target_bundles_drag_drop:
       media:
-        enabled: true
         weight: 2
+        enabled: false
       content_list:
-        enabled: true
         weight: 3
+        enabled: false
       2_column:
-        enabled: true
         weight: 4
+        enabled: false
       block:
-        enabled: true
         weight: 5
+        enabled: false
+      accordion:
+        weight: 13
+        enabled: false
+      column_group:
+        weight: 15
+        enabled: false
+      hero:
+        weight: 17
+        enabled: false
+      image:
+        weight: 18
+        enabled: false
+      row:
+        weight: 20
+        enabled: false
+      video:
+        weight: 21
+        enabled: false
+      wysiwyg:
+        weight: 22
+        enabled: false
 field_type: entity_reference_revisions

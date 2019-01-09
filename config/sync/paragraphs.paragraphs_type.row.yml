@@ -1,0 +1,11 @@
+uuid: 1d342eb3-53f6-436c-80fe-64079238ac23
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: B-WeKWS7bv_DBPFXeGN3_QC_M5QrShqOzrIzC9CQsAI
+id: row
+label: Row
+icon_uuid: null
+description: 'This component will allow admins to add other components in a row across the page.'
+behavior_plugins: {  }

@@ -1,0 +1,25 @@
+uuid: def4dc58-a115-415e-891f-0117a94d2225
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_horizontal_alignment
+    - paragraphs.paragraphs_type.row
+  module:
+    - options
+_core:
+  default_config_hash: FnRMnevpG2NO4fCSnR5m80tOoaWfKuuUphqO4vMmHi4
+id: paragraph.row.field_horizontal_alignment
+field_name: field_horizontal_alignment
+entity_type: paragraph
+bundle: row
+label: 'Horizontal Alignment'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: justify-content-start
+default_value_callback: ''
+settings: {  }
+field_type: list_string

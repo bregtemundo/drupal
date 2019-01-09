@@ -1,0 +1,25 @@
+uuid: 120eca76-431d-442c-a1dc-b672e7ab3206
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_layout
+    - paragraphs.paragraphs_type.row
+  module:
+    - options
+_core:
+  default_config_hash: xj-81aOy_XdJzQMNF4fRs1p5HArYZHKw6Y41A5NRc6I
+id: paragraph.row.field_layout
+field_name: field_layout
+entity_type: paragraph
+bundle: row
+label: Layout
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: uno
+default_value_callback: ''
+settings: {  }
+field_type: list_string

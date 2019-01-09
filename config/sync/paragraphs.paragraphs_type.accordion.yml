@@ -1,0 +1,11 @@
+uuid: 3093e4fe-fd4a-41d8-a8f0-d113b26e439c
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: S2KoDZC8rDCXnMFSlJHfMIw5PiW2vzR5CQvOqk5sPJA
+id: accordion
+label: Accordion
+icon_uuid: null
+description: 'A collapsible component comprised of a Summary and a Detail'
+behavior_plugins: {  }

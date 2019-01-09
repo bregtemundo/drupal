@@ -1,0 +1,11 @@
+uuid: e7c735cf-8c98-46b7-aa94-e67c1366f1c4
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: a6yfIIFBrkMBmwdHdt5FnxGo68BC_d2nzEQsBEQK3Ro
+id: video
+label: Video
+icon_uuid: null
+description: 'This Component will allow users to add YouTube or Vimeo Videos.'
+behavior_plugins: {  }

@@ -1,0 +1,23 @@
+uuid: b66a1e5e-2ff2-4424-8fab-164760ee8e4c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_border_style
+    - paragraphs.paragraphs_type.row
+  module:
+    - options
+_core:
+  default_config_hash: KsIrI5meHPUJso-2TR_ISieo__UDexZE3K1jOJKrtx8
+id: paragraph.row.field_border_style
+field_name: field_border_style
+entity_type: paragraph
+bundle: row
+label: 'Border Style'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

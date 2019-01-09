@@ -1,0 +1,44 @@
+uuid: 013c41a4-c2a4-4bd5-a4e5-328bfca2f7fd
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+_core:
+  default_config_hash: XY05SfufwYOLv96rJcUebp8OtD_6oLJirprvpqlDxYo
+id: paragraph.field_background_color
+field_name: field_background_color
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: oomph-red
+      label: 'Oomph Red'
+    -
+      value: oomph-teal
+      label: 'Oomph Teal'
+    -
+      value: oomph-blue
+      label: 'Oomph Blue'
+    -
+      value: black
+      label: Black
+    -
+      value: medium-gray
+      label: 'Medium Gray'
+    -
+      value: light-gray
+      label: 'Light Gray'
+    -
+      value: white
+      label: White
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

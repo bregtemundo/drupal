@@ -1,0 +1,32 @@
+uuid: 347857b7-0c5d-4d71-a449-0c86f8730849
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+_core:
+  default_config_hash: 7cAvQ0w32UOwGJMIAlRb17We3lkYncPpGqO84287VGY
+id: paragraph.field_horizontal_alignment
+field_name: field_horizontal_alignment
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: justify-content-start
+      label: Left
+    -
+      value: justify-content-center
+      label: Center
+    -
+      value: justify-content-end
+      label: Right
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

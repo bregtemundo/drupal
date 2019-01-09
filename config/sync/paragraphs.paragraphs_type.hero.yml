@@ -1,0 +1,11 @@
+uuid: f3c36d8b-c7d4-449f-af82-f6e5ea781cf4
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: cRRcVVArFtM1bqgoJjfugukldye440Wgq-wHHV7jqIU
+id: hero
+label: Hero
+icon_uuid: null
+description: 'Background image row that forces height based on the aspect ratio of the image supplied. '
+behavior_plugins: {  }

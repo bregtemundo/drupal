@@ -1,0 +1,99 @@
+uuid: 32961ebb-35c6-45fb-96ca-fc649402b33d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.column_group.field_background_color
+    - field.field.paragraph.column_group.field_column_content
+    - field.field.paragraph.column_group.field_custom_css_class
+    - paragraphs.paragraphs_type.column_group
+  module:
+    - field_group
+    - paragraphs
+third_party_settings:
+  field_group:
+    group_column_tabs:
+      children:
+        - group_column_tab_content
+        - group_column_tab_settings
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      format_settings:
+        id: ''
+        classes: ''
+        direction: horizontal
+      label: 'column tabs'
+      region: content
+    group_column_tab_content:
+      children:
+        - field_column_content
+      parent_name: group_column_tabs
+      weight: 7
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: open
+        description: ''
+        required_fields: true
+      label: 'column tab content'
+      region: content
+    group_column_tab_settings:
+      children:
+        - field_background_color
+        - field_custom_css_class
+      parent_name: group_column_tabs
+      weight: 8
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'column tab settings'
+      region: content
+_core:
+  default_config_hash: RX1NNPzBtlfijLyHVJ9Gdhlu_13d_TJQ4ZV1C-FVuWM
+id: paragraph.column_group.default
+targetEntityType: paragraph
+bundle: column_group
+mode: default
+content:
+  field_background_color:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_column_content:
+    type: paragraphs
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
+    third_party_settings: {  }
+    region: content
+  field_custom_css_class:
+    weight: 3
+    settings:
+      size: 72
+      placeholder: '.class_one .class__one--two'
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

@@ -1,0 +1,23 @@
+uuid: e52325f8-4cb2-4530-8062-8efe638360ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_hero_text
+    - paragraphs.paragraphs_type.hero
+  module:
+    - text
+_core:
+  default_config_hash: f7sz2daAiC9lDszLHNuS1l93AVr0fD-BiJ6my1vIjCU
+id: paragraph.hero.field_hero_text
+field_name: field_hero_text
+entity_type: paragraph
+bundle: hero
+label: 'Hero Text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

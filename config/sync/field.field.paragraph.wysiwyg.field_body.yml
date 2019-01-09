@@ -1,0 +1,23 @@
+uuid: c7370ae8-b41b-43dc-9609-f6bf05c26013
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_body
+    - paragraphs.paragraphs_type.wysiwyg
+  module:
+    - text
+_core:
+  default_config_hash: tzoXcw_8AXoEx7kegNpmcyXw7Wd0BPJG9v-g3J7lgp4
+id: paragraph.wysiwyg.field_body
+field_name: field_body
+entity_type: paragraph
+bundle: wysiwyg
+label: Body
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
