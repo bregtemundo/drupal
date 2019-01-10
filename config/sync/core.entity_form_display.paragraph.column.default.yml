@@ -1,0 +1,37 @@
+uuid: 93809ca5-18e2-4282-a3b0-e7ccfe667f8c
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.column.field_column_content
+    - paragraphs.paragraphs_type.column
+  module:
+    - paragraphs
+id: paragraph.column.default
+targetEntityType: paragraph
+bundle: column
+mode: default
+content:
+  field_column_content:
+    type: paragraphs
+    weight: 0
+    settings:
+      title: Module
+      title_plural: Modules
+      edit_mode: closed
+      closed_mode: preview
+      autocollapse: all
+      closed_mode_threshold: 0
+      add_mode: modal
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        duplicate: duplicate
+        collapse_edit_all: '0'
+        add_above: '0'
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

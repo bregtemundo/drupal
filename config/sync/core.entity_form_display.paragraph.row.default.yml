@@ -216,7 +216,7 @@ content:
     type: paragraphs
     weight: 2
     settings:
-      title: 'to row'
+      title: Column
       title_plural: Paragraphs
       edit_mode: closed
       closed_mode: preview

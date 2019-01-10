@@ -1,22 +1,21 @@
-uuid: 2f2d2d82-33ba-4565-be45-70f60baa2260
-langcode: en
+uuid: 8313e2ac-8bf9-45af-b366-7ea3af90a793
+langcode: nl
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_row_content
+    - field.storage.paragraph.field_column_content
+    - paragraphs.paragraphs_type.column
     - paragraphs.paragraphs_type.row
     - paragraphs.paragraphs_type.section
   module:
     - entity_reference_revisions
-_core:
-  default_config_hash: vnzqbwkWbsj3Vawx6jFPnc-bGTsTw3Baw_FuNQ_pJHQ
-id: paragraph.row.field_row_content
-field_name: field_row_content
+id: paragraph.column.field_column_content
+field_name: field_column_content
 entity_type: paragraph
-bundle: row
-label: 'Row Content'
+bundle: column
+label: 'Column content'
 description: ''
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
@@ -25,43 +24,44 @@ settings:
   handler_settings:
     negate: 1
     target_bundles:
+      column: column
       row: row
       section: section
     target_bundles_drag_drop:
-      row:
-        enabled: true
-        weight: 2
-      accordion:
-        weight: 8
-        enabled: false
-      image:
-        weight: 9
-        enabled: false
-      hero:
-        weight: 10
-        enabled: false
-      video:
-        weight: 11
-        enabled: false
-      wysiwyg:
-        weight: 12
-        enabled: false
       2_column:
         weight: 13
+        enabled: false
+      accordion:
+        weight: 14
         enabled: false
       block:
         weight: 15
         enabled: false
       column:
+        enabled: true
         weight: 16
-        enabled: false
       content_list:
         weight: 17
+        enabled: false
+      hero:
+        weight: 18
+        enabled: false
+      image:
+        weight: 19
         enabled: false
       media:
         weight: 20
         enabled: false
+      row:
+        enabled: true
+        weight: 21
       section:
         enabled: true
         weight: 22
+      video:
+        weight: 23
+        enabled: false
+      wysiwyg:
+        weight: 24
+        enabled: false
 field_type: entity_reference_revisions

@@ -43,3 +43,61 @@ function pure_admin_tweaks_page_attachments(array &$attachments) {
     $attachments['#attached']['library'][] = 'pure_admin_tweaks/admin_tweaks';
   }
 }
+
+
+/**
+ * Implements hook_preprocess_HOOK() for field_multiple_value_form().
+ */
+function pure_admin_tweaks_preprocess_field_multiple_value_form(&$variables) {
+  if (!empty($variables['table']['#header']) && isset($variables['table']['#rows'])) {
+
+    // Add the paragraph type as a class to every row.
+    if (isset($variables['element'][0]['#paragraph_type'])) {
+      foreach ($variables['table']['#rows'] as $key => $row) {
+        if( isset($row['data'][1]['data']['#paragraph_type']) && $row['data'][1]['data']['#paragraph_type'] == 'row' ){
+          //print_array($row);
+          #defaults_loaded
+          // dsm($row);
+          // TODO: can we get the field_layout content to style the row content
+        }
+        if (isset($row['data'][1]['data']['#paragraph_type'])) {
+          $variables['table']['#rows'][$key]['class'][] = 'sparagraph-type--' . str_replace('_', '-', $row['data'][1]['data']['#paragraph_type']);
+        }
+      }
+    }
+  }
+}
+
+function print_array($array,$depth=1,$indentation=0){
+    if (is_array($array)){
+                    echo "Array(\n";
+        foreach ($array as $key=>$value){
+            if(is_array($value)){
+                if($depth){
+                    echo "max depth reached.";
+                }
+                else{
+                    for($i=0;$i<$indentation;$i++){
+                        echo "&nbsp;&nbsp;&nbsp;&nbsp;";
+                    }
+                    echo $key."=Array(";
+                    print_array($value,$depth-1,$indentation+1);
+                    for($i=0;$i<$indentation;$i++){
+                        echo "&nbsp;&nbsp;&nbsp;&nbsp;";
+                    }
+                    echo ");";
+                }
+            }
+            else{
+                for($i=0;$i<$indentation;$i++){
+                    echo "&nbsp;&nbsp;&nbsp;&nbsp;";
+                }
+                echo $key."=>".$value."\n";
+            }
+        }
+                    echo ");\n";
+    }
+    else{
+        echo "It is not an array\n";
+    }
+}

@@ -1,0 +1,37 @@
+uuid: 56db9f73-844e-4ec1-8810-faf3bdc64c62
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.section.field_section_content
+    - paragraphs.paragraphs_type.section
+  module:
+    - paragraphs
+id: paragraph.section.default
+targetEntityType: paragraph
+bundle: section
+mode: default
+content:
+  field_section_content:
+    type: paragraphs
+    weight: 0
+    settings:
+      title: Row
+      title_plural: Paragraphs
+      edit_mode: closed
+      closed_mode: preview
+      autocollapse: all
+      closed_mode_threshold: 0
+      add_mode: modal
+      form_display_mode: default
+      default_paragraph_type: row
+      features:
+        duplicate: duplicate
+        collapse_edit_all: '0'
+        add_above: '0'
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

@@ -32,6 +32,7 @@ module:
   help: 0
   history: 0
   image: 0
+  kint: 0
   language: 0
   layout_builder: 0
   layout_discovery: 0
@@ -42,7 +43,6 @@ module:
   menu_ui: 0
   metatag: 0
   node: 0
-  oomph_paragraphs: 0
   options: 0
   page_cache: 0
   paragraphs_edit: 0
