@@ -1,0 +1,45 @@
+<?php
+
+/**
+ * @file
+ * Contains pure_admin_tweaks.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function pure_admin_tweaks_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the pure_admin_tweaks module.
+    case 'help.page.pure_admin_tweaks':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Admin Tweaks') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function pure_admin_tweaks_theme() {
+  return [
+    'pure_admin_tweaks' => [
+      'render element' => 'children',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_page_attachments().
+ */
+function pure_admin_tweaks_page_attachments(array &$attachments) {
+  $theme = \Drupal::theme()->getActiveTheme()->getName();
+  if ($theme == 'seven') {
+    $attachments['#attached']['library'][] = 'pure_admin_tweaks/admin_tweaks';
+  }
+}

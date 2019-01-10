@@ -29,7 +29,7 @@ third_party_settings:
         - field_background_image
       parent_name: group_row_configuration
       weight: 8
-      format_type: tab
+      format_type: fieldset
       format_settings:
         id: ''
         classes: ''
@@ -45,9 +45,9 @@ third_party_settings:
         - group_layout
         - group_border
         - group_extras
-      parent_name: ''
-      weight: 0
-      format_type: details
+      parent_name: group_rows
+      weight: 3
+      format_type: tab
       format_settings:
         label: 'Row Configuration'
         direction: vertical
@@ -55,6 +55,8 @@ third_party_settings:
         classes: ''
         open: false
         required_fields: true
+        formatter: closed
+        description: ''
       label: 'Row Configuration'
       region: content
     group_alignment:
@@ -63,7 +65,7 @@ third_party_settings:
         - field_horizontal_alignment
       parent_name: group_row_configuration
       weight: 7
-      format_type: tab
+      format_type: fieldset
       format_settings:
         id: ''
         classes: ''
@@ -78,7 +80,7 @@ third_party_settings:
         - field_reverse_order_for_desktop
       parent_name: group_row_configuration
       weight: 9
-      format_type: tab
+      format_type: fieldset
       format_settings:
         id: ''
         classes: ''
@@ -94,7 +96,7 @@ third_party_settings:
         - field_border_style
       parent_name: group_row_configuration
       weight: 10
-      format_type: tab
+      format_type: fieldset
       format_settings:
         id: ''
         classes: ''
@@ -108,8 +110,8 @@ third_party_settings:
         - field_triangle_separator
         - field_custom_css_class
       parent_name: group_row_configuration
-      weight: 11
-      format_type: tab
+      weight: 12
+      format_type: fieldset
       format_settings:
         id: ''
         classes: ''
@@ -117,6 +119,33 @@ third_party_settings:
         description: ''
         required_fields: true
       label: Extras
+      region: content
+    group_rows:
+      children:
+        - group_content
+        - group_row_configuration
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      format_settings:
+        id: ''
+        classes: ''
+        direction: horizontal
+      label: rows
+      region: content
+    group_content:
+      children:
+        - field_row_content
+      parent_name: group_rows
+      weight: 2
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: open
+        description: ''
+        required_fields: true
+      label: content
       region: content
 _core:
   default_config_hash: F9qOEeJ7aXqYQMvQd7GnKNZxVpRJmA2FknzB4ZlKN2k
@@ -126,13 +155,13 @@ bundle: row
 mode: default
 content:
   field_background_color:
-    weight: 8
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_background_image:
-    weight: 9
+    weight: 6
     settings:
       preview_image_style: thumbnail
       progress_indicator: throbber
@@ -146,7 +175,7 @@ content:
     type: options_select
     region: content
   field_border_style:
-    weight: 4
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -185,20 +214,21 @@ content:
     region: content
   field_row_content:
     type: paragraphs
-    weight: 10
+    weight: 2
     settings:
-      title: Paragraph
+      title: 'to row'
       title_plural: Paragraphs
       edit_mode: closed
       closed_mode: preview
       autocollapse: all
-      add_mode: button
+      closed_mode_threshold: 0
+      add_mode: modal
       form_display_mode: default
       default_paragraph_type: _none
-      closed_mode_threshold: 0
       features:
         duplicate: duplicate
-        collapse_edit_all: collapse_edit_all
+        collapse_edit_all: '0'
+        add_above: '0'
     third_party_settings: {  }
     region: content
   field_triangle_separator:

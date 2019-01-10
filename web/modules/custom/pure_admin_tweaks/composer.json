@@ -1,0 +1,14 @@
+{
+  "name": "drupal/pure_admin_tweaks",
+  "type": "drupal-module",
+  "description": "pure Admin Tweaks",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/pure_admin_tweaks",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/pure_admin_tweaks",
+    "source": "http://cgit.drupalcode.org/pure_admin_tweaks"
+  },
+  "require": { }
+}

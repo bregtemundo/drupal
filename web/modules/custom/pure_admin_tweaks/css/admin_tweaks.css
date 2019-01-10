@@ -1,0 +1,169 @@
+.paragraph-type-label {
+  line-height: 32px;
+  font-size: 20px;
+}
+
+/* on paragraph add modal: icons larger */
+ul.paragraphs-add-dialog-list input.field-add-more-submit {
+  background-size: 32px 32px !important;
+  padding-left: 50px !important;
+}
+
+/* media upload : thumbnails equal size to prevent visual jumping */
+.field--name-field-media .field--name-thumbnail,
+.field--name-field-medias .field--name-thumbnail {
+  width: 100px;
+  height: 100px;
+  background: #ccc;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+/* style remove/edit buttons underneath media items */
+.field--name-field-medias .ui-sortable-handle,
+.field--name-field-media .rendered-entity {
+  font-size: 0;
+}
+
+.field--name-field-medias .item-container input:nth-of-type(1),
+.field--name-field-media .item-container input:nth-of-type(1) {
+  background-image: url(../imgs/icons/trash.svg), linear-gradient(to bottom, #f6f6f3, #e7e7df);
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right-color: #eee;
+  background-position: 55% center, center;
+}
+
+.field--name-field-medias .item-container input:nth-of-type(2),
+.field--name-field-media .item-container input:nth-of-type(2) {
+  background-image: url(../imgs/icons/pencil.svg), linear-gradient(to bottom, #f6f6f3, #e7e7df);
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  background-position: 45% center, center;
+}
+
+.field--name-field-medias .item-container input:nth-of-type(1),
+.field--name-field-medias .item-container input:nth-of-type(2),
+.field--name-field-media .item-container input:nth-of-type(1),
+.field--name-field-media .item-container input:nth-of-type(2) {
+  font-size: .8rem;
+  display: inline-block;
+  background-repeat: no-repeat, repeat;
+  background-size: 1.3em, 100%;
+  text-indent: -999em;
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 50%;
+}
+
+/* media upload: draggable only on content (image), not on buttons */
+.field--name-field-media .entities-list.sortable .item-container:hover,
+.field--name-field-medias .entities-list.sortable .item-container:hover {
+  cursor: inherit;
+  opacity: 1;
+}
+.field--name-field-media .entities-list.sortable .item-container:hover article,
+.field--name-field-medias .entities-list.sortable .item-container:hover article {
+  cursor: move;
+  opacity: 0.6;
+}
+
+/* make entity reference table loop more like a label */
+.field-multiple-table thead > tr {
+  border: none;
+}
+.field-multiple-table thead th {
+  border: none;
+  padding-left: 0;
+  text-transform: none;
+  background: transparent;
+}
+.field-multiple-table tr {
+  border: 1px solid #e6e4df;
+}
+
+/* make link field look more like a label with inline inputs */
+.field--type-link fieldset {
+  padding: 0 !important;
+  border: none;
+  background: transparent !important;
+}
+.field--type-link fieldset:not(.fieldgroup) > legend {
+  border: none;
+  padding-left: 0;
+  text-transform: none;
+  background: transparent;
+  position: static;
+  letter-spacing: inherit;
+}
+.field--type-link fieldset .form-item {
+  width: 40%;
+  margin-right: 5%;
+  margin-top: 0;
+  float: left;
+}
+.field--type-link fieldset .form-item label {
+  font-weight: normal;
+}
+
+/* draggable table: add shadow to indicated dragged row */
+tr.draggable {
+  transition: box-shadow 0.3s ease-out;
+}
+tr.drag {
+  box-shadow: 1px 0 0 0 #CCC, 0 1px 0 0 #CCC, 1px 1px 0 0 #CCC, 1px 0 0 0 #CCC inset, 0 1px 0 0 #CCC inset, 0 0 15px rgba(0,0,0,0.15)
+}
+/* draggable table: changed indicator */
+tr.draggable td.field-multiple-drag,
+tr.draggable td {
+  position: relative;
+}
+tr.draggable abbr.tabledrag-changed {
+    border-bottom: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #de970a;
+    height: 100%;
+    overflow: hidden;
+    width: 4px;
+    text-indent: -100%;
+}
+
+/* hide row weight switch for users */
+.tabledrag-toggle-weight-wrapper {
+  display: none;
+}
+
+/* add more margin in between fields */
+.layout-region-node-main > .form-wrapper + .form-wrapper,
+.taxonomy-term-form > .form-wrapper + .form-wrapper  {
+  margin-top: 2em !important;
+}
+
+/* no dropshadows, rounded corners on input */
+input.form-autocomplete, input.form-text, input.form-tel, input.form-email, input.form-url, input.form-search, input.form-number, input.form-color, input.form-file, input.form-date, input.form-time, textarea.form-textarea {
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  border: 1px solid #b8b8b8 !important;
+  background-color: white !important;
+}
+select {
+  padding-top: .3em !important;
+  padding-bottom: .3em !important;
+  background-image: url(../../../../core/misc/icons/333333/caret-down.svg) !important;
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+  background-color: white !important;
+}
+
+.form-text:focus, .form-tel:focus, .form-email:focus, .form-url:focus, .form-search:focus, .form-number:focus, .form-color:focus, .form-file:focus, .form-textarea:focus, .form-date:focus, .form-time:focus {
+  border-color: #40b6ff !important;
+}
+select:focus {
+  border-color: #40b6ff !important;
+  box-shadow: none !important;
+  outline: none;
+}
