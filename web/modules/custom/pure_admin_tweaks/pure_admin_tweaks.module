@@ -68,36 +68,31 @@ function pure_admin_tweaks_preprocess_field_multiple_value_form(&$variables) {
   }
 }
 
-function print_array($array,$depth=1,$indentation=0){
-    if (is_array($array)){
-                    echo "Array(\n";
-        foreach ($array as $key=>$value){
-            if(is_array($value)){
-                if($depth){
-                    echo "max depth reached.";
-                }
-                else{
-                    for($i=0;$i<$indentation;$i++){
-                        echo "&nbsp;&nbsp;&nbsp;&nbsp;";
-                    }
-                    echo $key."=Array(";
-                    print_array($value,$depth-1,$indentation+1);
-                    for($i=0;$i<$indentation;$i++){
-                        echo "&nbsp;&nbsp;&nbsp;&nbsp;";
-                    }
-                    echo ");";
-                }
-            }
-            else{
-                for($i=0;$i<$indentation;$i++){
-                    echo "&nbsp;&nbsp;&nbsp;&nbsp;";
-                }
-                echo $key."=>".$value."\n";
-            }
-        }
-                    echo ");\n";
+
+function pure_admin_tweaks_field_widget_paragraphs_form_alter(&$element, &$form_state, $context) {
+
+
+  if ( isset($element['#paragraph_type']) && $element['#paragraph_type'] == 'row' ) {
+    if( isset($element['subform']['field_layout']) ){
+      $row_layout = $element['subform']['field_layout']['widget']['#default_value'][0];
+      $row_layout_class = "row-layout--" . $row_layout;
+      $element['subform']['#attributes']['class'][] = $row_layout_class;
     }
-    else{
-        echo "It is not an array\n";
-    }
+/*
+    if( isset($element['preview']['#paragraph']) && $element['preview']['#paragraph']->hasField('field_layout') ){
+      $element['subform']['#attributes']['class'][] = "layout-test";
+      $row_layout = $element['preview']['#paragraph']->get('field_layout')->getValue()[0]['value'];
+      $row_layout_class = "row-layout--" . $row_layout;
+      $element['subform']['#attributes']['class'][] = $row_layout_class;
+
+      $element['#prefix'] .= '<div class="' . $row_layout_class . '">';
+      $element['#suffix'] .= '</div>';
+
+    }*/
+  }
+
+  //add class to identify paragraph-top (hide info about columns)
+  if ( isset($element['#paragraph_type']) ) {
+    $element['top']['#attributes']['class'][] = 'paragraph-top--' . $element['#paragraph_type'] ;
+  }
 }

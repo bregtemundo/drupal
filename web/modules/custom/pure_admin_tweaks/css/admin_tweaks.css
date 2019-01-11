@@ -30,11 +30,97 @@ tr.paragraph-type--column {
   margin: 0 5px;
 }
 
+/* paragraph type row */
 tr.paragraph-type--row tbody {
   display: flex;
 }
 tr.paragraph-type--row tbody tbody {
-  display: inherit;
+  display: table-row-group;
+}
+.row-layout--duo__6-6 .paragraph-type--column:nth-child(odd) {
+  flex: 1 1 50%;
+  max-width: 50%;
+}
+.row-layout--duo__6-6 .paragraph-type--column:nth-child(even) {
+  flex: 1 1 50%;
+  max-width: 50%;
+}
+.row-layout--duo__3-9 tbody .paragraph-type--column:nth-child(odd) {
+  flex: 1 1 25%;
+  max-width: 25%;
+}
+.row-layout--duo__3-9 tbody .paragraph-type--column:nth-child(even) {
+  flex: 1 1 75%;
+  max-width: 75%;
+}
+
+.row-layout--duo__9-3 tbody .paragraph-type--column:nth-child(odd) {
+  flex: 1 1 75%;
+  max-width: 75%;
+}
+.row-layout--duo__9-3 tbody .paragraph-type--column:nth-child(even) {
+  flex: 1 1 25%;
+  max-width: 25%;
+}
+
+.row-layout--trio__4-4-4 tbody .paragraph-type--column:nth-child(1) {
+  flex: 1 1 33%;
+  max-width: 33%;
+}
+.row-layout--trio__4-4-4 tbody .paragraph-type--column:nth-child(2) {
+  flex: 1 1 33%;
+  max-width: 33%;
+}
+.row-layout--trio__4-4-4 tbody .paragraph-type--column:nth-child(3) {
+  flex: 1 1 33%;
+  max-width: 33%;
+}
+
+
+
+
+/*
+&--duo__9-3 {
+
+      .oomph-paragraph__component:nth-child(odd) {
+        @include flex-col(75%);
+      }
+
+      .oomph-paragraph__component:nth-child(even) {
+        @include flex-col(25%);
+      }
+    }
+
+    &--duo__8-4 {
+
+      .oomph-paragraph__component:nth-child(odd) {
+        @include flex-col(66%);
+      }
+
+      .oomph-paragraph__component:nth-child(even) {
+        @include flex-col(34%);
+      }
+    }
+
+    &--duo__3-9,
+    &--duo__3-9-alt {
+
+      .oomph-paragraph__component:nth-child(odd) {
+        @include flex-col(25%);
+      }
+
+      .oomph-paragraph__component:nth-child(even) {
+        @include flex-col(75%);
+      }
+    }*/
+
+
+/* paragraph type column*/
+.paragraph-top--column > .paragraph-info,
+.paragraph-top--column > .paragraph-type,
+tr.paragraph-type--column > .field-multiple-drag,
+.paragraph-top--column > .paragraphs-actions .paragraphs-icon-button-collapse {
+  display: none;
 }
 
 tr.paragraph-row thead {
