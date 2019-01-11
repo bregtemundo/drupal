@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_section_content
+    - paragraphs.paragraphs_type.row
     - paragraphs.paragraphs_type.section
   module:
     - entity_reference_revisions
@@ -20,13 +21,13 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    negate: 1
+    negate: 0
     target_bundles:
-      section: section
+      row: row
     target_bundles_drag_drop:
       section:
-        enabled: true
         weight: 13
+        enabled: false
       2_column:
         weight: 14
         enabled: false
@@ -36,8 +37,8 @@ settings:
       block:
         weight: 16
         enabled: false
-      column_group:
-        weight: 17
+      column:
+        weight: 16
         enabled: false
       content_list:
         weight: 18
@@ -52,8 +53,8 @@ settings:
         weight: 21
         enabled: false
       row:
+        enabled: true
         weight: 22
-        enabled: false
       video:
         weight: 23
         enabled: false

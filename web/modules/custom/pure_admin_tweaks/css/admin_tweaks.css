@@ -3,6 +3,57 @@
   font-size: 20px;
 }
 
+table {
+  border-collapse:separate;
+  border-spacing: 0 1em;
+}
+
+
+tr.paragraph-row {
+  border-left: 10px solid #98a0a2 !important;
+  background: #98a0a2 !important;
+  border-radius: 10px 0 0 10px;
+}
+tr.paragraph-type--row {
+  border-color: green !important;
+  background: #fff !important;
+}
+tr.paragraph-type--section {
+  border-color: purple !important;
+  background: #98a0a2 !important;
+}
+tr.paragraph-type--column {
+  border-color: #333 !important;
+  background: #fff !important;
+  border-width: 2px !important;
+  border-radius: 10px !important;
+  margin: 0 5px;
+}
+
+tr.paragraph-type--row tbody {
+  display: flex;
+}
+tr.paragraph-type--row tbody tbody {
+  display: inherit;
+}
+
+tr.paragraph-row thead {
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* on paragraph add modal: icons larger */
 ul.paragraphs-add-dialog-list input.field-add-more-submit {
   background-size: 32px 32px !important;
