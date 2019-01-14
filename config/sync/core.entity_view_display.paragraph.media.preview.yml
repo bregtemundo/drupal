@@ -1,8 +1,9 @@
-uuid: 14575123-0561-4a4f-a847-26c64ba3c4cd
+uuid: 8cc2dbdf-670d-48a6-82f6-1e9715151424
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.paragraph.preview
     - field.field.paragraph.media.field_media
     - paragraphs.paragraphs_type.media
   module:
@@ -10,15 +11,17 @@ dependencies:
 third_party_settings:
   layout_builder:
     sections: {  }
-id: paragraph.media.default
+    allow_custom: false
+    enabled: false
+id: paragraph.media.preview
 targetEntityType: paragraph
 bundle: media
-mode: default
+mode: preview
 content:
   field_media:
     type: entity_reference_entity_view
     weight: 0
-    label: hidden
+    label: above
     settings:
       view_mode: default
       link: false

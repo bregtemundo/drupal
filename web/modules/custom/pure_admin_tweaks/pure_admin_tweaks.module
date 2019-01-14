@@ -27,12 +27,26 @@ function pure_admin_tweaks_help($route_name, RouteMatchInterface $route_match) {
  * Implements hook_theme().
  */
 function pure_admin_tweaks_theme() {
-  return [
-    'pure_admin_tweaks' => [
+  $theme = [];
+
+  $theme['pure_admin_tweaks'] =  [
       'render element' => 'children',
-    ],
   ];
+
+
+  $theme['paragraph__row'] = [
+      'base hook' => 'paragraph',
+  ];
+
+  $theme['paragraph__column'] = [
+    'base hook' => 'paragraph',
+  ];
+
+  return $theme;
+
 }
+
+
 
 /**
  * Implements hook_page_attachments().
@@ -73,7 +87,7 @@ function pure_admin_tweaks_field_widget_paragraphs_form_alter(&$element, &$form_
 
 
   if ( isset($element['#paragraph_type']) && $element['#paragraph_type'] == 'row' ) {
-    if( isset($element['subform']['field_layout']) ){
+    if( isset($element['subform']['field_layout']['widget']['#default_value'][0]) ){
       $row_layout = $element['subform']['field_layout']['widget']['#default_value'][0];
       $row_layout_class = "row-layout--" . $row_layout;
       $element['subform']['#attributes']['class'][] = $row_layout_class;
@@ -95,4 +109,43 @@ function pure_admin_tweaks_field_widget_paragraphs_form_alter(&$element, &$form_
   if ( isset($element['#paragraph_type']) ) {
     $element['top']['#attributes']['class'][] = 'paragraph-top--' . $element['#paragraph_type'] ;
   }
+}
+
+
+
+/**
+ * Implements hook_contextual_links_view_alter().
+ *
+ * Open the paragraph_edit contextual links in a modal dialog. (on frontend)
+ */
+function pure_admin_tweaks_contextual_links_view_alter(&$element, $items) {
+
+  if (isset($element['#links']['paragraphs-editedit-form'])) {
+    $element['#links']['paragraphs-editedit-form']['attributes'] = [
+      'class' => ['use-ajax'],
+      'data-dialog-type' => 'dialog',
+      'data-dialog-renderer' => 'modal',
+      'data-dialog-options' => json_encode(['width' => '50%'])
+    ];
+    //$element['#attached'] => ['library' => ['core/drupal.dialog.ajax']]
+    $element['#attached']['library'][] = 'core/drupal.dialog.ajax';
+  }
+
+  if (isset($element['#links']['paragraphs-editclone-form'])) {
+    $element['#links']['paragraphs-editclone-form']['attributes'] = [
+      'class' => ['use-ajax'],
+      'data-dialog-type' => 'dialog',
+      'data-dialog-renderer' => 'modal',
+      'data-dialog-options' => json_encode(['width' => '50%']),
+    ];
+  }
+
+  if (isset($element['#links']['paragraphs-editdelete-form'])) {
+    $element['#links']['paragraphs-editdelete-form']['attributes'] = [
+      'class' => ['use-ajax'],
+      'data-dialog-type' => 'dialog',
+      'data-dialog-renderer' => 'modal',
+    ];
+  }
+
 }

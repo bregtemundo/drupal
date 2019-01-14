@@ -1,0 +1,21 @@
+{#
+/**
+ * @file
+ * Theme override for a paragraph column group.
+ * We need this to be blank, and content will use the
+ * field--paragraph--column-group.html.twig template
+ */
+#}
+
+
+{%
+  set classes = [
+    paragraph.field_custom_css_class.value ? paragraph.field_custom_css_class.value
+  ]
+%}
+
+{% block paragraph %}
+  <div {{ attributes.addClass(classes) }}>
+    {{ content|without('field_custom_css_class') }}
+  </div>
+{% endblock paragraph %}

@@ -1,8 +1,9 @@
-uuid: 7babbf9d-d0ae-406a-b2ce-b8948e0c5f86
+uuid: f319e275-6c08-4d9c-9402-36e0a5c1b930
 langcode: nl
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.paragraph.preview
     - field.field.paragraph.column.field_column_content
     - paragraphs.paragraphs_type.column
   module:
@@ -11,17 +12,19 @@ dependencies:
 third_party_settings:
   layout_builder:
     sections: {  }
-id: paragraph.column.default
+    allow_custom: false
+    enabled: false
+id: paragraph.column.preview
 targetEntityType: paragraph
 bundle: column
-mode: default
+mode: preview
 content:
   field_column_content:
     type: entity_reference_revisions_entity_view
     weight: 0
     label: hidden
     settings:
-      view_mode: default
+      view_mode: preview
       link: ''
     third_party_settings: {  }
     region: content

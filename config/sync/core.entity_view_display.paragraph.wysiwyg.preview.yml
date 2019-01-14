@@ -1,0 +1,40 @@
+uuid: fa0aa469-20c0-4a85-a16d-2a6e7202a09f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.wysiwyg.field_animation
+    - field.field.paragraph.wysiwyg.field_background_color
+    - field.field.paragraph.wysiwyg.field_body
+    - field.field.paragraph.wysiwyg.field_custom_css_class
+    - field.field.paragraph.wysiwyg.field_drop_shadow
+    - paragraphs.paragraphs_type.wysiwyg
+  module:
+    - layout_builder
+    - text
+third_party_settings:
+  layout_builder:
+    sections: {  }
+    allow_custom: false
+    enabled: false
+_core:
+  default_config_hash: LiDs7UuDKVi38dhwI4hy2X9O-PgehMDzi8UNaIv9gPA
+id: paragraph.wysiwyg.preview
+targetEntityType: paragraph
+bundle: wysiwyg
+mode: preview
+content:
+  field_body:
+    weight: 0
+    label: hidden
+    settings:
+      trim_length: 200
+    third_party_settings: {  }
+    type: text_trimmed
+    region: content
+hidden:
+  field_animation: true
+  field_background_color: true
+  field_custom_css_class: true
+  field_drop_shadow: true

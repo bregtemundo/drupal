@@ -10,8 +10,12 @@ dependencies:
     - field.field.paragraph.wysiwyg.field_drop_shadow
     - paragraphs.paragraphs_type.wysiwyg
   module:
+    - layout_builder
     - options
     - text
+third_party_settings:
+  layout_builder:
+    sections: {  }
 _core:
   default_config_hash: LiDs7UuDKVi38dhwI4hy2X9O-PgehMDzi8UNaIv9gPA
 id: paragraph.wysiwyg.default

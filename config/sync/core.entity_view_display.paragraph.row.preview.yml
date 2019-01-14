@@ -1,8 +1,9 @@
-uuid: 6c71efdf-2d08-4fd5-9184-2f67c17789c1
+uuid: 93ac81aa-6656-4a9d-963c-4a7aba017131
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.paragraph.preview
     - field.field.paragraph.row.field_custom_css_class
     - field.field.paragraph.row.field_layout
     - field.field.paragraph.row.field_row_content
@@ -10,39 +11,27 @@ dependencies:
   module:
     - entity_reference_revisions
     - layout_builder
-    - options
 third_party_settings:
   layout_builder:
     sections: {  }
+    allow_custom: false
+    enabled: false
 _core:
   default_config_hash: Qw8nQLsm2U46_5lKYYcXuYmVX4mWaAvvVFHShCGli7Q
-id: paragraph.row.default
+id: paragraph.row.preview
 targetEntityType: paragraph
 bundle: row
-mode: default
+mode: preview
 content:
-  field_custom_css_class:
-    weight: 12
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_layout:
-    weight: 5
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: list_key
-    region: content
   field_row_content:
     type: entity_reference_revisions_entity_view
     weight: 0
     label: hidden
     settings:
-      view_mode: default
+      view_mode: preview
       link: ''
     third_party_settings: {  }
     region: content
-hidden: {  }
+hidden:
+  field_custom_css_class: true
+  field_layout: true

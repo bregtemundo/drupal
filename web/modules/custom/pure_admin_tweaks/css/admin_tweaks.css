@@ -1,7 +1,4 @@
-.paragraph-type-label {
-  line-height: 32px;
-  font-size: 20px;
-}
+
 
 table {
   border-collapse:separate;
@@ -10,29 +7,39 @@ table {
 
 
 tr.paragraph-row {
-  border-left: 10px solid #98a0a2 !important;
-  background: #98a0a2 !important;
-  border-radius: 10px 0 0 10px;
+  background: #f8f8f8 !important;
+  border-radius: 0;
+  display: flex;
+  margin: 0 0 15px 0;
 }
+tr.paragraph-row > td {
+  width: 100%;
+}
+
 tr.paragraph-type--row {
-  border-color: green !important;
-  background: #fff !important;
+  border-color: #b3b2b2 !important;
+  background: #dedede !important;
 }
 tr.paragraph-type--section {
-  border-color: purple !important;
-  background: #98a0a2 !important;
+
 }
 tr.paragraph-type--column {
-  border-color: #333 !important;
   background: #fff !important;
-  border-width: 2px !important;
+  border-width: 0px !important;
   border-radius: 10px !important;
   margin: 0 5px;
 }
+tr.paragraph-type--column tr.paragraph-row {
+  border-radius: 10px;
+}
 
 /* paragraph type row */
-tr.paragraph-type--row tbody {
+tr.paragraph-type--row tbody,
+.field--name-field-row-content {
   display: flex;
+}
+.field--name-field-row-content > * {
+  width: 100%;
 }
 tr.paragraph-type--row tbody tbody {
   display: table-row-group;
@@ -76,43 +83,61 @@ tr.paragraph-type--row tbody tbody {
   max-width: 33%;
 }
 
+.row-layout--trio__6-3-3 tbody .paragraph-type--column:nth-child(1) {
+  flex: 1 1 50%;
+  max-width: 50%;
+}
+.row-layout--trio__6-3-3 tbody .paragraph-type--column:nth-child(2) {
+  flex: 1 1 25%;
+  max-width: 25%;
+}
+.row-layout--trio__6-3-3 tbody .paragraph-type--column:nth-child(3) {
+  flex: 1 1 25%;
+  max-width: 25%;
+}
 
+.row-layout--trio__3-6-3 tbody .paragraph-type--column:nth-child(1) {
+  flex: 1 1 25%;
+  max-width: 25%;
+}
+.row-layout--trio__3-6-3 tbody .paragraph-type--column:nth-child(2) {
+  flex: 1 1 50%;
+  max-width: 50%;
+}
+.row-layout--trio__3-6-3 tbody .paragraph-type--column:nth-child(3) {
+  flex: 1 1 25%;
+  max-width: 25%;
+}
 
+.row-layout--trio__3-3-6 tbody .paragraph-type--column:nth-child(1) {
+  flex: 1 1 25%;
+  max-width: 25%;
+}
+.row-layout--trio__3-3-6 tbody .paragraph-type--column:nth-child(2) {
+  flex: 1 1 25%;
+  max-width: 25%;
+}
+.row-layout--trio__3-3-6 tbody .paragraph-type--column:nth-child(3) {
+  flex: 1 1 50%;
+  max-width: 50%;
+}
 
-/*
-&--duo__9-3 {
-
-      .oomph-paragraph__component:nth-child(odd) {
-        @include flex-col(75%);
-      }
-
-      .oomph-paragraph__component:nth-child(even) {
-        @include flex-col(25%);
-      }
-    }
-
-    &--duo__8-4 {
-
-      .oomph-paragraph__component:nth-child(odd) {
-        @include flex-col(66%);
-      }
-
-      .oomph-paragraph__component:nth-child(even) {
-        @include flex-col(34%);
-      }
-    }
-
-    &--duo__3-9,
-    &--duo__3-9-alt {
-
-      .oomph-paragraph__component:nth-child(odd) {
-        @include flex-col(25%);
-      }
-
-      .oomph-paragraph__component:nth-child(even) {
-        @include flex-col(75%);
-      }
-    }*/
+.row-layout--quartet tbody .paragraph-type--column:nth-child(1) {
+  flex: 1 1 25%;
+  max-width: 25%;
+}
+.row-layout--quartet tbody .paragraph-type--column:nth-child(2) {
+  flex: 1 1 25%;
+  max-width: 25%;
+}
+.row-layout--quartet tbody .paragraph-type--column:nth-child(3) {
+  flex: 1 1 25%;
+  max-width: 25%;
+}
+.row-layout--quartet tbody .paragraph-type--column:nth-child(4) {
+  flex: 1 1 25%;
+  max-width: 25%;
+}
 
 
 /* paragraph type column*/
@@ -128,10 +153,78 @@ tr.paragraph-row thead {
 }
 
 
+/* paragraph settings */
+.paragraph-settings:not([open]) {
+  background: transparent;
+  border-color: transparent;
+}
+
+/**
+  inline editing inside a column (when for e.g. 4 columns are used) gets crowded
+  fake a modal window for editing a paragraph inside the column paragraph type
+  also remeber to overlay the Collapse (save) button to apply changed and "close" modal
+*/
+.paragraph-type--column .paragraphs-subform .paragraphs-subform {
+  position: fixed;
+  top: 20%;
+  left: 15%;
+  background: white;
+  box-shadow: 4px 4px 10px rgba(0,0,0,1);
+  border: 1px solid #ccc;
+  padding: 30px;
+  z-index: 3;
+  max-height: 60%;
+  width: 70%;
+  overflow: auto;
+}
+.paragraph-type--column .paragraphs-subform .paragraphs-subform:before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1000%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: white;
+}
+.paragraph-type--column .paragraphs-subform .paragraphs-subform:after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: rgba(0, 0, 0, .7);
+}
+.paragraph-type--column .paragraphs-subform .paragraphs-subform > div {
+  position: relative;
+  z-index: 3;
+}
+.paragraph-type--column .paragraphs-subform .paragraphs-icon-button-collapse {
+  position: fixed;
+  top: 20%;
+  z-index: 4;
+}
 
 
 
 
+
+/*
+previews
+*/
+.paragraph--type--media.paragraph--view-mode--preview img {
+  max-width: 60px;
+}
+.paragraph--type--media.paragraph--view-mode--preview .field__item {
+  float: left;
+  margin-right: 5px;
+}
+
+.paragraph--type--image.paragraph--view-mode--preview img {
+  max-width: 60px;
+}
 
 
 
@@ -144,67 +237,6 @@ tr.paragraph-row thead {
 ul.paragraphs-add-dialog-list input.field-add-more-submit {
   background-size: 32px 32px !important;
   padding-left: 50px !important;
-}
-
-/* media upload : thumbnails equal size to prevent visual jumping */
-.field--name-field-media .field--name-thumbnail,
-.field--name-field-medias .field--name-thumbnail {
-  width: 100px;
-  height: 100px;
-  background: #ccc;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-
-/* style remove/edit buttons underneath media items */
-.field--name-field-medias .ui-sortable-handle,
-.field--name-field-media .rendered-entity {
-  font-size: 0;
-}
-
-.field--name-field-medias .item-container input:nth-of-type(1),
-.field--name-field-media .item-container input:nth-of-type(1) {
-  background-image: url(../imgs/icons/trash.svg), linear-gradient(to bottom, #f6f6f3, #e7e7df);
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  border-right-color: #eee;
-  background-position: 55% center, center;
-}
-
-.field--name-field-medias .item-container input:nth-of-type(2),
-.field--name-field-media .item-container input:nth-of-type(2) {
-  background-image: url(../imgs/icons/pencil.svg), linear-gradient(to bottom, #f6f6f3, #e7e7df);
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  background-position: 45% center, center;
-}
-
-.field--name-field-medias .item-container input:nth-of-type(1),
-.field--name-field-medias .item-container input:nth-of-type(2),
-.field--name-field-media .item-container input:nth-of-type(1),
-.field--name-field-media .item-container input:nth-of-type(2) {
-  font-size: .8rem;
-  display: inline-block;
-  background-repeat: no-repeat, repeat;
-  background-size: 1.3em, 100%;
-  text-indent: -999em;
-  overflow: hidden;
-  box-sizing: border-box;
-  width: 50%;
-}
-
-/* media upload: draggable only on content (image), not on buttons */
-.field--name-field-media .entities-list.sortable .item-container:hover,
-.field--name-field-medias .entities-list.sortable .item-container:hover {
-  cursor: inherit;
-  opacity: 1;
-}
-.field--name-field-media .entities-list.sortable .item-container:hover article,
-.field--name-field-medias .entities-list.sortable .item-container:hover article {
-  cursor: move;
-  opacity: 0.6;
 }
 
 /* make entity reference table loop more like a label */
@@ -257,17 +289,7 @@ tr.draggable td.field-multiple-drag,
 tr.draggable td {
   position: relative;
 }
-tr.draggable abbr.tabledrag-changed {
-    border-bottom: none;
-    position: absolute;
-    left: 0;
-    top: 0;
-    background: #de970a;
-    height: 100%;
-    overflow: hidden;
-    width: 4px;
-    text-indent: -100%;
-}
+
 
 /* hide row weight switch for users */
 .tabledrag-toggle-weight-wrapper {

@@ -20,21 +20,6 @@ settings:
       value: uno
       label: '- 100%'
     -
-      value: uno__9
-      label: '- 75%'
-    -
-      value: uno__8
-      label: '- 67%'
-    -
-      value: uno__6
-      label: '- 50%'
-    -
-      value: uno__4
-      label: '- 33%'
-    -
-      value: uno__3
-      label: '- 25%'
-    -
       value: two-columns
       label: 'Two columns'
     -
@@ -44,20 +29,8 @@ settings:
       value: duo__3-9
       label: '- 25/75%'
     -
-      value: duo__3-9-alt
-      label: '- 25%/75% alternating'
-    -
       value: duo__9-3
       label: '- 75/25%'
-    -
-      value: duo__4-8
-      label: '- 33/67%'
-    -
-      value: duo__4-8-alt
-      label: '- 33/67% alternating'
-    -
-      value: duo__8-4
-      label: '- 67/33%'
     -
       value: three-columns
       label: 'Three columns'

@@ -2,3 +2,5 @@ admin_tweaks:
   css:
     theme:
       css/admin_tweaks.css: {}
+  js:
+    js/row-layout.js: {}
