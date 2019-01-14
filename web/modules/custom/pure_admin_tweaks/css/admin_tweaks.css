@@ -29,8 +29,13 @@ tr.paragraph-type--column {
   border-radius: 10px !important;
   margin: 0 5px;
 }
+
+/* modules inside a column*/
 tr.paragraph-type--column tr.paragraph-row {
   border-radius: 10px;
+}
+tr.paragraph-type--column .paragraph-top {
+  grid-template-columns: auto;
 }
 
 /* paragraph type row */
