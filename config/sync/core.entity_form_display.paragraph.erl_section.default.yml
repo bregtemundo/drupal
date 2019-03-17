@@ -1,0 +1,48 @@
+uuid: 83f834e1-b3da-47bc-a4f5-bcf32a73ef9b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.erl_section.field_title
+    - paragraphs.paragraphs_type.erl_section
+  enforced:
+    module:
+      - erl_paragraphs
+  module:
+    - field_group
+third_party_settings:
+  field_group:
+    group_more_:
+      children:
+        - field_title
+      parent_name: ''
+      weight: 1
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'More Options'
+      region: content
+_core:
+  default_config_hash: 3a7HVWoXB5soKEbv41UGYfl_OQDQD8TRjO0vXac9Y1Y
+id: paragraph.erl_section.default
+targetEntityType: paragraph
+bundle: erl_section
+mode: default
+content:
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  moderation_state: true
+  status: true
+  uid: true

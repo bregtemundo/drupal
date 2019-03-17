@@ -22,7 +22,9 @@ module:
   dynamic_page_cache: 0
   editor: 0
   editor_file: 0
+  entity_reference_layout: 0
   entity_reference_revisions: 0
+  erl_paragraphs: 0
   field: 0
   field_group: 0
   field_ui: 0
@@ -32,6 +34,7 @@ module:
   help: 0
   history: 0
   image: 0
+  inline_entity_form: 0
   kint: 0
   language: 0
   layout_builder: 0
@@ -42,6 +45,7 @@ module:
   media_library: 0
   menu_ui: 0
   metatag: 0
+  minifyhtml: 0
   node: 0
   options: 0
   page_cache: 0

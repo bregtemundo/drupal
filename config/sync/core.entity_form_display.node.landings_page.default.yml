@@ -5,7 +5,7 @@ dependencies:
   config:
     - field.field.node.landings_page.body
     - field.field.node.landings_page.field_paragraphs
-    - field.field.node.landings_page.layout_builder__layout
+    - field.field.node.landings_page.field_paragraphs_content
     - node.type.landings_page
   module:
     - paragraphs
@@ -48,6 +48,18 @@ content:
         duplicate: duplicate
         collapse_edit_all: '0'
         add_above: '0'
+    third_party_settings: {  }
+    region: content
+  field_paragraphs_content:
+    type: entity_reference_paragraphs
+    weight: 123
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
     third_party_settings: {  }
     region: content
   langcode:
@@ -111,5 +123,4 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden:
-  layout_builder__layout: true
+hidden: {  }

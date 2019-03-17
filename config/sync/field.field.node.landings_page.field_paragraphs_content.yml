@@ -1,0 +1,79 @@
+uuid: 85956878-1d08-4e7d-943e-94d0cceb48c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paragraphs_content
+    - node.type.landings_page
+  module:
+    - entity_reference_layout
+id: node.landings_page.field_paragraphs_content
+field_name: field_paragraphs_content
+entity_type: node
+bundle: landings_page
+label: content
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: '1'
+    target_bundles: null
+    target_bundles_drag_drop:
+      2_column:
+        weight: '15'
+        enabled: 0
+      accordion:
+        weight: '16'
+        enabled: 0
+      block:
+        weight: '17'
+        enabled: 0
+      column:
+        weight: '18'
+        enabled: 0
+      content_list:
+        weight: '19'
+        enabled: 0
+      erl_section:
+        weight: '20'
+        enabled: 0
+      hero:
+        weight: '21'
+        enabled: 0
+      image:
+        weight: '22'
+        enabled: 0
+      media:
+        weight: '23'
+        enabled: 0
+      row:
+        weight: '24'
+        enabled: 0
+      section:
+        weight: '25'
+        enabled: 0
+      test_section:
+        weight: '26'
+        enabled: 0
+      video:
+        weight: '27'
+        enabled: 0
+      wysiwyg:
+        weight: '28'
+        enabled: 0
+    layout_bundles:
+      erl_section: erl_section
+    allowed_layouts:
+      'Columns: 1':
+        layout_onecol: 'One column'
+      'Columns: 2':
+        layout_twocol: 'Two column'
+        layout_twocol_bricks: 'Two column bricks'
+      'Columns: 3':
+        layout_threecol_25_50_25: 'Three column 25/50/25'
+        layout_threecol_33_34_33: 'Three column 33/34/33'
+field_type: entity_reference_layout_revisioned

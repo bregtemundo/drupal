@@ -1,0 +1,26 @@
+uuid: 53c936ae-5179-429b-975b-99390b67873f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.erl_section.field_title
+    - paragraphs.paragraphs_type.erl_section
+  enforced:
+    module:
+      - erl_paragraphs
+_core:
+  default_config_hash: VqrclbXKSutU0uC2xBG8Py2j5rPst5RDpGZO_dDJ6B4
+id: paragraph.erl_section.default
+targetEntityType: paragraph
+bundle: erl_section
+mode: default
+content:
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

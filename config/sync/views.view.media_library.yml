@@ -215,7 +215,7 @@ display:
               authenticated: authenticated
           is_grouped: true
           group_info:
-            label: Published
+            label: Gepubliceerd
             description: ''
             identifier: status
             optional: true
@@ -226,11 +226,11 @@ display:
             default_group_multiple: {  }
             group_items:
               1:
-                title: Published
+                title: Gepubliceerd
                 operator: '='
                 value: '1'
               2:
-                title: Unpublished
+                title: 'Niet gepubliceerd'
                 operator: '='
                 value: '0'
           plugin_id: boolean

@@ -16,7 +16,7 @@ bundle: accordion
 label: 'Background Image/Icon'
 description: 'Optional. By default, this image will display in front of the Summary text.'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

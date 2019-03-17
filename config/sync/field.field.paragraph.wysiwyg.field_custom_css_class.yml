@@ -14,7 +14,7 @@ bundle: wysiwyg
 label: 'Custom CSS Class'
 description: 'Add a chain of classes as needed (Example: "class__one class__one--two")'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }

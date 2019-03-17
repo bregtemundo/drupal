@@ -485,8 +485,8 @@ display:
           type: boolean
           settings:
             format: custom
-            format_custom_true: Published
-            format_custom_false: Unpublished
+            format_custom_true: Gepubliceerd
+            format_custom_false: 'Niet gepubliceerd'
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -574,7 +574,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Operations
+          label: Bewerkingen
           exclude: false
           alter:
             alter_text: false
@@ -736,11 +736,11 @@ display:
             default_group_multiple: {  }
             group_items:
               1:
-                title: Published
+                title: Gepubliceerd
                 operator: '='
                 value: '1'
               2:
-                title: Unpublished
+                title: 'Niet gepubliceerd'
                 operator: '='
                 value: '0'
           plugin_id: boolean

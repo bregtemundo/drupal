@@ -1,0 +1,14 @@
+uuid: 1ddc58c4-7472-437a-890c-989a0a5da7f4
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - erl_paragraphs
+_core:
+  default_config_hash: '-FsgqkvjFVhlaAXRoLJm50Z4MJLaIri6bzCnEAMskd8'
+id: erl_section
+label: Section
+icon_uuid: null
+description: 'Entity Reference Layout Section'
+behavior_plugins: {  }

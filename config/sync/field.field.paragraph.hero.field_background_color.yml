@@ -16,7 +16,7 @@ bundle: hero
 label: 'Background Color'
 description: 'This background color will appear behind the contents of the WYSIWYG text. '
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }

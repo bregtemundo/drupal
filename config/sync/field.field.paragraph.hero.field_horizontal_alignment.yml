@@ -16,7 +16,7 @@ bundle: hero
 label: 'Horizontal Alignment'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value:
   -
     value: justify-content-center

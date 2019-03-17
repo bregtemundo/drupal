@@ -16,7 +16,7 @@ bundle: hero
 label: 'Vertical Alignment'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value:
   -
     value: flex-align-center

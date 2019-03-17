@@ -1,0 +1,22 @@
+uuid: db114d4a-68f7-49a9-9c39-0c47c94added
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.erl_section
+id: paragraph.erl_section.status
+field_name: status
+entity_type: paragraph
+bundle: erl_section
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
